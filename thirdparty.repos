@@ -75,3 +75,15 @@ repositories:
     type: git
     url: https://github.com/pal-robotics/urdf_test.git
     version: humble-devel
+  src/ThirdParty/kobuki_ros:
+    type: git
+    url: https://github.com/Juancams/kobuki_ros.git
+    version: humble-devel
+  src/ThirdParty/kobuki_ros_iterfaces:
+    type: git
+    url: https://github.com/kobuki-base/kobuki_ros_interfaces.git
+    version: devel
+  src/ThirdParty/kobuki_core:
+    type: git
+    url: https://github.com/kobuki-base/kobuki_core.git
+    version: release/1.3.x
