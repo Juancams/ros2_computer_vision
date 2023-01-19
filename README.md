@@ -32,6 +32,29 @@ To change the Gazebo world or the initial position/rotation of the Tiago robot, 
 If you have a low performance, close the Gazebo's client. Check gzclient process, and kill it:
 ```bash
 kill -9 `pgrep -f gzclient`
+```
+
+# Run Gazebo & Kobuki in ROS2
+
+If it's your first time, please move kobuki model to GAZEBO_MODEL_PATH.
+```bash
+mkdir -p ~/.gazebo/models/kobuki_description
+cd <your-workspace>/src/ThirParty/kobuki_ros/kobuki_description
+cp -r meshes/ ~/.gazebo/models/kobuki_description/meshes
+```
+
+How to run the kobuki simulation:
+
+```bash
+source install/setup.sh
+ros2 launch computer_vision kobuki_sim.launch.py
+``` 
+
+To change the Gazebo world or the initial position/rotation of the Tiago robot, you can modify the `config/params.yaml` file.
+
+If you have a low performance, close the Gazebo's client. Check gzclient process, and kill it:
+```bash
+kill -9 `pgrep -f gzclient`
 ``` 
 
 # Run Navigation in ROS2
